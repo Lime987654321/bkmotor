@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galleri – BK Motor</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .galleri-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .galleri-grid img {
+      width: 100%;
+      height: auto;
+      border: 4px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .galleri-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      border-color: #f44336;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.3);
+    }
+
+    .lightbox .close, .lightbox .prev, .lightbox .next {
+      position: absolute;
+      top: 50%;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      transform: translateY(-50%);
+    }
+
+    .lightbox .close {
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      transform: none;
+    }
+
+    .lightbox .prev {
+      left: 30px;
+    }
+
+    .lightbox .next {
+      right: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="bilder/BKlogolitenhvit.png" alt="BK Motor logo" class="logo" />
+    <nav>
+      <a href="index.html">Hjem</a>
+      <a href="galleri.html">Galleri</a>
+      <a href="index.html#annonser">Annonser</a>
+      <a href="omoss.html">Om oss</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="logo-container">
+    <img src="bilder/BKlogopng.png" alt="BK Motor logo" class="logo" />
+  </div>
+
+  <section>
+    <h1>Galleri</h1>
+    <p>Se bilder fra butikken og våre biler.</p>
+
+    <div class="galleri-grid">
+      <img src="bilder/bilde1.jpg" alt="Bilde 1" loading="lazy">
+      <img src="bilder/bilde2.jpg" alt="Bilde 2" loading="lazy">
+      <img src="bilder/bilde3.jpg" alt="Bilde 3" loading="lazy">
+      <img src="bilder/bilde4.jpg" alt="Bilde 4" loading="lazy">
+      <img src="bilder/bilde5.jpg" alt="Bilde 5" loading="lazy">
+      <img src="bilder/bilde6.jpg" alt="Bilde 6" loading="lazy">
+      <img src="bilder/bilde7.jpg" alt="Bilde 7" loading="lazy">
+      <img src="bilder/bilde8.jpg" alt="Bilde 8" loading="lazy">
+      <img src="bilder/bilde9.jpg" alt="Bilde 9" loading="lazy">
+      <img src="bilder/bilde10.jpg" alt="Bilde 10" loading="lazy">
+      <img src="bilder/bilde11.jpg" alt="Bilde 11" loading="lazy">
+      <img src="bilder/bilde12.jpg" alt="Bilde 12" loading="lazy">
+      <img src="bilder/bilde13.jpg" alt="Bilde 13" loading="lazy">
+      <img src="bilder/bilde14.jpg" alt="Bilde 14" loading="lazy">
+      <img src="bilder/bilde15.jpg" alt="Bilde 15" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <span class="prev" onclick="changeSlide(-1)">❮</span>
+    <img id="lightbox-img" src="">
+    <span class="next" onclick="changeSlide(1)">❯</span>
+  </div>
+
+  <footer>
+    <p>© 2025 BK Motor</p>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryImages = document.querySelectorAll('.galleri-grid img');
+    let currentIndex = 0;
+
+    galleryImages.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        openLightbox();
+      });
+    });
+
+    function openLightbox() {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = galleryImages[currentIndex].src;
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+
+    function changeSlide(n) {
+      currentIndex = (currentIndex + n + galleryImages.length) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentIndex].src;
+    }
+
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') changeSlide(1);
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+  </script>
+</body>
+</html>
+

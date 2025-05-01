@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BK Motor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="bilder/BKlogolitenhvit.png" alt="BK Motor logo" class="logo">
+    <nav>
+      <a href="#hjem">Hjem</a>
+      <a href="galleri.html">Galleri</a>
+      <a href="#annonser">Annonser</a>
+      <a href="omoss.html">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="logo-container">
+    <img src="bilder/BKlogopng.png" alt="BK Motor logo" class="logo">
+  </div>
+
+  <section id="hjem" class="hero">
+    <h1>Velkommen til BK Motor</h1>
+    <p>Din pålitelige partner innen bil.</p>
+  </section>
+
+  <section id="galleri">
+    <h2>Galleri</h2>
+    <div class="slideshow-container">
+
+      <div class="slides fade">
+        <img src="bilder/bilde2.jpg" alt="Butikkbilde 1">
+      </div>
+
+      <div class="slides fade">
+        <img src="bilder/bilde3.jpg" alt="Butikkbilde 2">
+      </div>
+
+      <div class="slides fade">
+        <img src="bilder/bilde1.jpg" alt="Butikkbilde 3">
+      </div>
+
+      <!-- Piler -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- Små prikker under -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+
+  <section id="annonser">
+    <h2>Se våre biler på Finn.no</h2>
+    <a href="https://www.finn.no/mobility/search/car?orgId=1217182" target="_blank" class="button">Gå til annonser</a>
+  </section>
+  
+  <section id="omoss">
+    <h2>Om BK Motor</h2>
+    <p>Vi tilbyr kvalitetssikrede biler, lang erfaring og personlig service.</p>
+    <p>Åpningstider: Man-Fre 09-17 | Lør 10-14</p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt oss</h2>
+    <p>Adresse: Eksempelveien 12, 1234 Oslo</p>
+    <p>Telefon: 123 45 678</p>
+    <p>E-post: post@bkmotor.no</p>
+  </section>
+
+  <footer>
+    <p>© 2025 BK Motor</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
+
