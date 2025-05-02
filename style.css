@@ -292,3 +292,33 @@ footer {
     .hero p {
         font-size: 18px;
         margin-bottom: 30px;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    body {
+        background-attachment: scroll;
+        background-position: center bottom;
+        background-size: contain !important; /* For mobile, set contain and force it */
+    }
+
+    .ansatt-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Sentere bilder på Om oss siden */
+    .ansatt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
