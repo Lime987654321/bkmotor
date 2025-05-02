@@ -11,8 +11,9 @@ body {
     background-color: white;
     color: #333;
     scroll-behavior: smooth;
-    background: url('bilder/bakgrunnbilblur2.jpg') no-repeat bottom center fixed;
+    background: url('bilder/bakgrunnbilblur2.jpg') no-repeat center 100px fixed;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Header */
@@ -177,79 +178,120 @@ section {
     background-color: #717171;
 }
 
-/* Om oss seksjon */
-#ansatte {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+/* Knapp */
+.button {
+    background: #f44336;
+    color: white;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 40px;
 }
 
-#ansatte h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
+/* Ansatt seksjon */
 .ansatt-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
 }
 
 .ansatt {
-    background-color: white;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-    padding: 20px;
-    width: 280px;
+    max-width: 250px;
     text-align: center;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 .ansatt img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.ansatt h3 {
-    font-size: 22px;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-.ansatt p {
-    color: #777;
-}
-
-/* Google Maps */
-#kart {
-    margin-top: 50px;
-}
-
-.kart-container iframe {
+    height: auto;
     border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Responsiv bakgrunn til mobil */
+.ansatt img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Kart seksjon */
+.kart-container {
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Galleri grid */
+.galleri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.galleri-grid img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galleri-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #f44336;
+}
+
+/* -------------------------------------
+   RESPONSIVITET FOR MOBIL & SMÅ SKJERMER
+------------------------------------- */
 @media (max-width: 768px) {
-    body {
-        background: url('bilder/bakgrunnbilblur2.jpg') no-repeat bottom center fixed;
-        background-size: auto 100%; /* Endrer bakgrunnens størrelse på mobil */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px 10px 0 0;
     }
 
     .logo-container .logo {
-        width: 100%;
-        height: auto;
+        width: 90%;
+        max-width: 300px;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .hero p {
         font-size: 18px;
-        max-width: 80%;
+        margin-bottom: 30px;
     }
 
     .slideshow-container {
@@ -257,58 +299,18 @@ section {
     }
 
     .button {
-        padding: 12px 30px;
+        padding: 10px 20px;
         font-size: 1em;
     }
 
-    section {
-        padding: 60px 20px;
-    }
-
-    /* Ansatt seksjon */
-    .ansatt-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .ansatt {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-}
-
-/* For mindre skjermer */
-@media (max-width: 480px) {
     body {
-        background: url('bilder/bakgrunnbilblur2.jpg') no-repeat bottom center fixed;
-        background-size: auto 100%; /* Bakgrunn er nede og ikke zoomet */
+        background-attachment: scroll;
+        background-position: center top;
+        background-size: cover;
     }
 
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 16px;
-        max-width: 90%;
-    }
-
-    .button {
-        padding: 12px 25px;
-        font-size: 0.9em;
-    }
-
-    section {
-        padding: 40px 20px;
-    }
-
-    /* Ansatt seksjon */
     .ansatt-container {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .ansatt {
-        width: 90%;
+        gap: 20px;
     }
 }
