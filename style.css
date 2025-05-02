@@ -187,9 +187,14 @@ section {
     border-radius: 30px;
     font-size: 1.1em;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
     display: inline-block;
     margin-top: 40px;
+}
+
+.button:hover {
+    background: #e53935;
+    transform: scale(1.05);
 }
 
 /* Ansatt seksjon */
@@ -204,6 +209,18 @@ section {
 .ansatt {
     max-width: 250px;
     text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .ansatt img {
@@ -312,49 +329,19 @@ footer {
     .ansatt-container {
         flex-direction: column;
         gap: 20px;
-    }
-/* Ansatt seksjon */
-.ansatt-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.ansatt {
-    max-width: 250px;
-    text-align: center;
-}
-
-.ansatt img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Responsiv justering for mobil */
-@media (max-width: 768px) {
-    .ansatt-container {
-        justify-content: center; /* Sentere alle ansatte i containeren */
-        gap: 20px;
+        justify-content: center;
     }
 
     .ansatt {
-        width: 100%; /* Få ansatt-elementene til å ta opp hele bredden på mobilen */
-        max-width: 300px; /* Sett en maks bredde på hvert ansatt-element */
+        width: 100%;
+        max-width: 300px;
         margin-left: auto;
-        margin-right: auto; /* Sørg for at hvert ansatt-element er sentrert */
+        margin-right: auto;
     }
 
     .ansatt img {
-        width: 100%; /* Sørg for at bildene tar hele bredden */
+        width: 100%;
         margin-left: auto;
-        margin-right: auto; /* Sentere bildene */
+        margin-right: auto;
     }
-}
-
-
 }
