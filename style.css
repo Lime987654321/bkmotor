@@ -12,7 +12,7 @@ body {
     color: #333;
     scroll-behavior: smooth;
     background: url('bilder/bakgrunnbilblur2.jpg') no-repeat center bottom fixed;
-    background-size: cover;
+    background-size: cover; /* Bakgrunnsbilde dekkes på større skjermer */
     background-attachment: fixed;
 }
 
@@ -292,33 +292,3 @@ footer {
     .hero p {
         font-size: 18px;
         margin-bottom: 30px;
-    }
-
-    .slideshow-container {
-        max-width: 100%;
-    }
-
-    .button {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-
-    body {
-        background-attachment: scroll;
-        background-position: center bottom;
-        background-size: cover;
-    }
-
-    .ansatt-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* Sentere bilder på Om oss siden */
-    .ansatt {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
