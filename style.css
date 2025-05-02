@@ -11,7 +11,7 @@ body {
     background-color: white;
     color: #333;
     scroll-behavior: smooth;
-    background: url('bilder/bakgrunnbilblur2.jpg') no-repeat center 100px fixed;
+    background: url('bilder/bakgrunnbilblur2.jpg') no-repeat center bottom fixed;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -305,12 +305,20 @@ footer {
 
     body {
         background-attachment: scroll;
-        background-position: center top;
+        background-position: center bottom;
         background-size: cover;
     }
 
     .ansatt-container {
         flex-direction: column;
         gap: 20px;
+    }
+
+    /* Sentere bilder på Om oss siden */
+    .ansatt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
