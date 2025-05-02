@@ -177,25 +177,65 @@ section {
     background-color: #717171;
 }
 
-/* Knapp */
-.button {
-    background: #f44336;
-    color: white;
-    padding: 11px 25px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1em;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    display: inline-block;
-    margin-top: 40px;
+/* Om oss seksjon */
+#ansatte {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#ansatte h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.ansatt-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ansatt {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.ansatt img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.ansatt h3 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.ansatt p {
+    color: #777;
+}
+
+/* Google Maps */
+#kart {
+    margin-top: 50px;
+}
+
+.kart-container iframe {
+    border-radius: 10px;
 }
 
 /* Responsiv bakgrunn til mobil */
 @media (max-width: 768px) {
     body {
-        background-size: cover;
-        background-position: bottom center;
+        background: url('bilder/bakgrunnbilblur2.jpg') no-repeat bottom center fixed;
+        background-size: auto 100%; /* Endrer bakgrunnens størrelse på mobil */
     }
 
     .logo-container .logo {
@@ -224,10 +264,26 @@ section {
     section {
         padding: 60px 20px;
     }
+
+    /* Ansatt seksjon */
+    .ansatt-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ansatt {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
 
 /* For mindre skjermer */
 @media (max-width: 480px) {
+    body {
+        background: url('bilder/bakgrunnbilblur2.jpg') no-repeat bottom center fixed;
+        background-size: auto 100%; /* Bakgrunn er nede og ikke zoomet */
+    }
+
     .hero h1 {
         font-size: 24px;
     }
@@ -244,5 +300,15 @@ section {
 
     section {
         padding: 40px 20px;
+    }
+
+    /* Ansatt seksjon */
+    .ansatt-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ansatt {
+        width: 90%;
     }
 }
