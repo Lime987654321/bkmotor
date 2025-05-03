@@ -1,211 +1,390 @@
 /* Reset */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html, body {
-  height: 100%;
-  font-family: 'Helvetica Neue', sans-serif;
+body {
+    font-family: 'Helvetica Neue', sans-serif;
 }
-
-/* Bakgrunns-SVG */
-.background {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-}
-.background svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  /* preserveAspectRatio styres av CSS slik at det fyller */
-}
-
-/* Header */
+/* Grunnstil */
+/* Header med moderne utseende */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to right, #111, #222);
-  padding: 15px 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  position: relative;
-  z-index: 10;
-  border-bottom: 2px solid #f44336;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #111, #222);
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid #f44336;
 }
+
 header .logo {
-  width: 100px;
-  transition: transform 0.3s ease;
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
+
 header .logo:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
+
+/* Navigasjonslenker med animasjon */
+/* Header med moderne utseende */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #111, #222);
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid #f44336;
+}
+
+header .logo {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigasjonslenker med animasjon */
 nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  transition: color 0.3s ease;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
 }
+
 nav a::after {
-  content: "";
-  position: absolute;
-  width: 0; height: 2px;
-  background: #f44336;
-  bottom: -5px; left: 0;
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f44336;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
 }
+
 nav a:hover {
-  color: #f44336;
+    color: #f44336;
 }
+
 nav a:hover::after {
-  width: 100%;
+    width: 100%;
 }
+
 
 /* Stor logo */
 .logo-container {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
+
 .logo-container .logo {
-  width: 90%;
-  max-width: 750px;
-  animation: fadeInZoom 2s ease;
+    width: 750px;
+    height: auto;
+    animation: fadeInZoom 2s ease;
 }
+
 @keyframes fadeInZoom {
-  0% { opacity: 0; transform: scale(0.7); }
-  100% { opacity: 1; transform: scale(1); }
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
+
 .logo-container .logo:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
+    transition: transform 0.3s;
 }
 
-/* Hero-seksjon */
+/* Velkommen seksjon */
 .hero {
-  text-align: center;
-  margin: 30px 20px 150px;
-  animation: fadeInText 2s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 150px;
+    padding: 20px;
+    animation: fadeInText 2s ease forwards;
 }
+
 @keyframes fadeInText {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 .hero h1 {
-  font-size: 2.4rem;
-  color: #222;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-size: 38px;
+    color: #222;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
+
 .hero p {
-  font-size: 1.25rem;
-  color: #666;
-  max-width: 600px;
-  line-height: 1.6;
-  margin: 0 auto 60px;
+    font-size: 23px;
+    color: #666;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 60px;
 }
 
-/* Galleri */
+/* Seksjoner */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Galleriseksjon */
 #galleri {
-  padding: 80px 20px;
-  text-align: center;
+    margin-top: 60px;
 }
+
 .slideshow-container {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
 }
-.slides { display: none; }
+
+.slides {
+    display: none;
+}
+
 .slides img {
-  width: 100%;
-  border-radius: 10px;
+    width: 100%;
+    border-radius: 10px;
 }
+
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-size: 24px;
-  transition: 0.6s ease;
-  user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
 }
-.prev { left: 0; }
-.next { right: 0; }
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-.dots-container {
-  text-align: center;
-  margin-top: 10px;
+
+.prev {
+    left: 0;
 }
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
 .dot {
-  cursor: pointer;
-  height: 15px; width: 15px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
-.active, .dot:hover { background-color: #717171; }
 
-/* Annonser */
-#annonser {
-  padding: 80px 20px;
-  text-align: center;
+.active, .dot:hover {
+    background-color: #717171;
 }
+
+/* Knapp */
 .button {
-  background: #f44336;
-  color: white;
-  padding: 11px 25px;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.1em;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
-  display: inline-block;
-}
-.button:hover {
-  background: #e53935;
-  transform: scale(1.05);
+    background: #f44336;
+    color: white;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 40px;
 }
 
-/* Om oss */
-#omoss, #kontakt {
-  padding: 80px 20px;
-  text-align: center;
+.button:hover {
+    background: #e53935;
+    transform: scale(1.05);
+}
+
+/* Ansatt seksjon */
+.ansatt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.ansatt {
+    max-width: 250px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ansatt img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ansatt img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Kart seksjon */
+.kart-container {
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Footer */
 footer {
-  background: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
 }
 
-/* Responsivt for mobil */
+/* Galleri grid */
+.galleri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.galleri-grid img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galleri-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #f44336;
+}
+
+/* -------------------------------------
+   RESPONSIVITET FOR MOBIL & SMÅ SKJERMER
+------------------------------------- */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
-  nav a {
-    display: inline-block;
-    margin: 10px 10px 0 0;
-  }
-  .logo-container .logo {
-    max-width: 300px;
-  }
-  .hero h1 { font-size: 2rem; }
-  .hero p  { font-size: 1rem; margin-bottom: 30px; }
-  .slideshow-container { max-width: 100%; }
-  .button { padding: 10px 20px; font-size: 1em; }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px 10px 0 0;
+    }
+
+    .logo-container .logo {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .ansatt-container {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .ansatt {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ansatt img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
