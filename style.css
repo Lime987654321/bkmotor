@@ -405,3 +405,7 @@ footer {
   height: 100%;
   display: block;
 }
+.html.body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
