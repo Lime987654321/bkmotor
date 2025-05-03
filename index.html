@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BK Motor</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- SVG-bakgrunn -->
+  <div class="background">
+    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+      <!-- Diagonale linjer i ulike hvite nyanser -->
+      <line x1="0"   y1="0"   x2="-400" y2="800" stroke="#ffffff" stroke-width="2"/>
+      <line x1="40"  y1="0"   x2="-360" y2="800" stroke="#f9f9f9" stroke-width="2"/>
+      <line x1="80"  y1="0"   x2="-320" y2="800" stroke="#f2f2f2" stroke-width="2"/>
+      <line x1="120" y1="0"   x2="-280" y2="800" stroke="#eeeeee" stroke-width="2"/>
+      <line x1="160" y1="0"   x2="-240" y2="800" stroke="#eaeaea" stroke-width="2"/>
+      <line x1="200" y1="0"   x2="-200" y2="800" stroke="#f5f5f5" stroke-width="2"/>
+      <line x1="240" y1="0"   x2="-160" y2="800" stroke="#ffffff" stroke-width="2"/>
+      <line x1="280" y1="0"   x2="-120" y2="800" stroke="#f9f9f9" stroke-width="2"/>
+      <line x1="320" y1="0"   x2="-80"  y2="800" stroke="#f2f2f2" stroke-width="2"/>
+      <line x1="360" y1="0"   x2="-40"  y2="800" stroke="#eeeeee" stroke-width="2"/>
+      <line x1="400" y1="0"   x2="0"    y2="800" stroke="#eaeaea" stroke-width="2"/>
+      <line x1="440" y1="0"   x2="40"   y2="800" stroke="#f5f5f5" stroke-width="2"/>
+      <line x1="480" y1="0"   x2="80"   y2="800" stroke="#ffffff" stroke-width="2"/>
+      <line x1="520" y1="0"   x2="120"  y2="800" stroke="#f9f9f9" stroke-width="2"/>
+      <line x1="560" y1="0"   x2="160"  y2="800" stroke="#f2f2f2" stroke-width="2"/>
+      <line x1="600" y1="0"   x2="200"  y2="800" stroke="#eeeeee" stroke-width="2"/>
+      <line x1="640" y1="0"   x2="240"  y2="800" stroke="#eaeaea" stroke-width="2"/>
+      <line x1="680" y1="0"   x2="280"  y2="800" stroke="#f5f5f5" stroke-width="2"/>
+      <line x1="720" y1="0"   x2="320"  y2="800" stroke="#ffffff" stroke-width="2"/>
+      <line x1="760" y1="0"   x2="360"  y2="800" stroke="#f9f9f9" stroke-width="2"/>
+      <line x1="800" y1="0"   x2="400"  y2="800" stroke="#f2f2f2" stroke-width="2"/>
+    </svg>
+  </div>
+
   <header>
     <img src="bilder/BKlogolitenhvit.png" alt="BK Motor logo" class="logo">
     <nav>
       <a href="#hjem">Hjem</a>
-      <a href="galleri.html">Galleri</a>
+      <a href="#galleri">Galleri</a>
       <a href="#annonser">Annonser</a>
-      <a href="omoss.html">Om oss</a>
+      <a href="#omoss">Om oss</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
   <div class="logo-container">
     <img src="bilder/BKlogopng.png" alt="BK Motor logo" class="logo">
-  </div>
-  <!-- Bakgrunn med SVG -->
-  <div class="background">
-    <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <!-- Diagonale linjer i ulike grader av hvitt -->
-      <line x1="0" y1="0" x2="-400" y2="800" stroke="#ffffff" stroke-width="2"/>
-      <line x1="40" y1="0" x2="-360" y2="800" stroke="#f9f9f9" stroke-width="2"/>
-      <line x1="80" y1="0" x2="-320" y2="800" stroke="#f2f2f2" stroke-width="2"/>
-      <line x1="120" y1="0" x2="-280" y2="800" stroke="#eeeeee" stroke-width="2"/>
-      <line x1="160" y1="0" x2="-240" y2="800" stroke="#eaeaea" stroke-width="2"/>
-      <line x1="200" y1="0" x2="-200" y2="800" stroke="#f5f5f5" stroke-width="2"/>
-      <line x1="240" y1="0" x2="-160" y2="800" stroke="#ffffff" stroke-width="2"/>
-      <line x1="280" y1="0" x2="-120" y2="800" stroke="#f9f9f9" stroke-width="2"/>
-      <line x1="320" y1="0" x2="-80" y2="800" stroke="#f2f2f2" stroke-width="2"/>
-      <line x1="360" y1="0" x2="-40" y2="800" stroke="#eeeeee" stroke-width="2"/>
-      <line x1="400" y1="0" x2="0" y2="800" stroke="#eaeaea" stroke-width="2"/>
-      <line x1="440" y1="0" x2="40" y2="800" stroke="#f5f5f5" stroke-width="2"/>
-      <line x1="480" y1="0" x2="80" y2="800" stroke="#ffffff" stroke-width="2"/>
-      <line x1="520" y1="0" x2="120" y2="800" stroke="#f9f9f9" stroke-width="2"/>
-      <line x1="560" y1="0" x2="160" y2="800" stroke="#f2f2f2" stroke-width="2"/>
-      <line x1="600" y1="0" x2="200" y2="800" stroke="#eeeeee" stroke-width="2"/>
-      <line x1="640" y1="0" x2="240" y2="800" stroke="#eaeaea" stroke-width="2"/>
-      <line x1="680" y1="0" x2="280" y2="800" stroke="#f5f5f5" stroke-width="2"/>
-      <line x1="720" y1="0" x2="320" y2="800" stroke="#ffffff" stroke-width="2"/>
-      <line x1="760" y1="0" x2="360" y2="800" stroke="#f9f9f9" stroke-width="2"/>
-      <line x1="800" y1="0" x2="400" y2="800" stroke="#f2f2f2" stroke-width="2"/>
-    </svg>
   </div>
 
   <section id="hjem" class="hero">
@@ -57,27 +59,19 @@
   <section id="galleri">
     <h2>Galleri</h2>
     <div class="slideshow-container">
-
       <div class="slides fade">
         <img src="bilder/bilde2.jpg" alt="Butikkbilde 1">
       </div>
-
       <div class="slides fade">
         <img src="bilder/bilde3.jpg" alt="Butikkbilde 2">
       </div>
-
       <div class="slides fade">
         <img src="bilder/bilde1.jpg" alt="Butikkbilde 3">
       </div>
-
-      <!-- Piler -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <br>
-
-    <!-- Små prikker under -->
-    <div style="text-align:center">
+    <div class="dots-container">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
@@ -92,7 +86,7 @@
   <section id="omoss">
     <h2>Om BK Motor</h2>
     <p>Vi tilbyr kvalitetssikrede biler, lang erfaring og personlig service.</p>
-    <p>Åpningstider: Man-Fre 08-16 | Lør 10-14</p>
+    <p>Åpningstider: Man–Fre 08–16 | Lør 10–14</p>
   </section>
 
   <section id="kontakt">
@@ -107,8 +101,6 @@
   </footer>
 
   <script src="script.js"></script>
-
-  
 </body>
 </html>
 
