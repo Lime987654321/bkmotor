@@ -4,11 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
 }
-/* Grunnstil */
-/* Header med moderne utseende */
+
 /* Background SVG Overlay */
 .background {
     position: fixed;
@@ -18,7 +18,6 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    opacity: 1;
     pointer-events: none;
 }
 
@@ -28,16 +27,7 @@ body {
     display: block;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-}
-/* Grunnstil */
-/* Header med moderne utseende */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -45,14 +35,11 @@ header {
     background: linear-gradient(to right, #111, #222);
     padding: 15px 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 10;
     border-bottom: 2px solid #f44336;
 }
 
 header .logo {
     width: 100px;
-    height: auto;
     transition: transform 0.3s ease;
 }
 
@@ -60,31 +47,6 @@ header .logo:hover {
     transform: scale(1.1);
 }
 
-/* Navigasjonslenker med animasjon */
-/* Header med moderne utseende */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, #111, #222);
-    padding: 15px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 10;
-    border-bottom: 2px solid #f44336;
-}
-
-header .logo {
-    width: 100px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-header .logo:hover {
-    transform: scale(1.1);
-}
-
-/* Navigasjonslenker med animasjon */
 nav a {
     color: white;
     margin: 0 15px;
@@ -113,18 +75,15 @@ nav a:hover::after {
     width: 100%;
 }
 
-
-/* Stor logo */
+/* Logo Container */
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin: 40px 0 20px;
 }
 
 .logo-container .logo {
     width: 750px;
-    height: auto;
     animation: fadeInZoom 2s ease;
 }
 
@@ -144,14 +103,13 @@ nav a:hover::after {
     transition: transform 0.3s;
 }
 
-/* Velkommen seksjon */
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 150px;
+    margin: 30px 0 150px;
     padding: 20px;
     animation: fadeInText 2s ease forwards;
 }
@@ -172,7 +130,7 @@ nav a:hover::after {
     color: #222;
     font-weight: 800;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero p {
@@ -183,13 +141,13 @@ nav a:hover::after {
     margin-bottom: 60px;
 }
 
-/* Seksjoner */
+/* Sections */
 section {
     padding: 80px 20px;
     text-align: center;
 }
 
-/* Galleriseksjon */
+/* Gallery Section */
 #galleri {
     margin-top: 60px;
 }
@@ -213,14 +171,12 @@ section {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 24px;
-    transition: 0.6s ease;
     user-select: none;
+    transition: 0.6s ease;
 }
 
 .prev {
@@ -232,7 +188,7 @@ section {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dot {
@@ -250,7 +206,7 @@ section {
     background-color: #717171;
 }
 
-/* Knapp */
+/* Button */
 .button {
     background: #f44336;
     color: white;
@@ -269,7 +225,7 @@ section {
     transform: scale(1.05);
 }
 
-/* Ansatt seksjon */
+/* Employee Section */
 .ansatt-container {
     display: flex;
     flex-wrap: wrap;
@@ -297,7 +253,6 @@ section {
 
 .ansatt img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -308,12 +263,10 @@ section {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Kart seksjon */
+/* Map Section */
 .kart-container {
-    margin-top: 40px;
+    margin: 40px auto;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Footer */
@@ -325,7 +278,7 @@ footer {
     font-size: 0.9em;
 }
 
-/* Galleri grid */
+/* Gallery Grid */
 .galleri-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -337,7 +290,6 @@ footer {
 
 .galleri-grid img {
     width: 100%;
-    height: auto;
     border: 4px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -350,9 +302,7 @@ footer {
     border-color: #f44336;
 }
 
-/* -------------------------------------
-   RESPONSIVITET FOR MOBIL & SMÅ SKJERMER
-------------------------------------- */
+/* Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -392,53 +342,13 @@ footer {
         font-size: 1em;
     }
 
-    body {
-        background-attachment: scroll;
-        background-position: center top;
-        background-size: cover;
-    }
-
     .ansatt-container {
         flex-direction: column;
         gap: 20px;
-        justify-content: center;
     }
 
     .ansatt {
-        width: 100%;
         max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
     }
-
-    .ansatt img {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    html, body {
-  height: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
 }
-
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  opacity: 0.06;
-  pointer-events: none;
-}
-
-.background svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
